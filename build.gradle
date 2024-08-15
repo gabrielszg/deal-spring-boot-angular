@@ -6,6 +6,7 @@ plugins {
 
 group = 'me.dio'
 version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
 
 java {
 	toolchain {
@@ -25,6 +26,12 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "me.dio.DealSpringBootAngularApplication"
+	}
 }
 
 tasks.named('test') {

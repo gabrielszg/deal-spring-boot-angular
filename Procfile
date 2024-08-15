@@ -1,0 +1,1 @@
+web: java -jar build/libs/deal-spring-boot-angular-0.0.1-SNAPSHOT.jar
